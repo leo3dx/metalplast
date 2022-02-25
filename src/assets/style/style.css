@@ -1,0 +1,38 @@
+.invisble{
+    visibility:hidden;
+}
+.visible{
+    visibility:visible;
+}
+.login{
+    margin:auto;
+    width:70%;
+}
+.container{
+    margin-top:50px;
+}
+html{
+    background-color:F6F6F6;
+}
+
+/* Estilos de modulo funcionario */
+.menu{
+    width:20%;
+    height:1000px;
+    background-color:#D5DBDB;
+}
+@media (max-width: 600px) {
+    .menu{
+        width:25%;
+        height:800px;
+    }
+    .fs-4{
+        font-size: 13px !important;
+    }
+}
+.link:hover{
+    background-color: #E74C3C  ;
+}
+
+
+
