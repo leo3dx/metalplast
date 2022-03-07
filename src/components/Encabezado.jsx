@@ -25,7 +25,9 @@ const Encabezado = (props) => {
                                 <span className="navbar-toggler-icon"></span>
                             </button>
                             <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                                <h2 className="ms-auto">{props.titulo}</h2>
+                                <h2 className="">{props.titulo}</h2>
+                                <Link className="nav-link link text-black ms-3" to={props.opcion === "Crear Concecutivo"? "/funcionario":"/administrador"}>Dashboard</Link>
+                                <Link className="nav-link link text-black" to={props.opcion === "Crear Concecutivo"? "/concecutivo":"/usuarios"}>{props.opcion}</Link>
                                 <ul className="navbar-nav ms-auto">
                                     <li className="nav-item dropdown">
                                         <Link to="#"

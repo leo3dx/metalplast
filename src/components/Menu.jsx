@@ -14,10 +14,10 @@ class Menu extends Component {
                 <div className="col-1 menu">
                     <img src={logo} alt="" width="100%"/>
                     <nav className="navbar row text-center">
-                        <Link className="nav-link link fs-4 text-black" to="/funcionario">
+                        <Link className="nav-link link fs-4 text-black" to={this.props.opcion === "Crear Concecutivo"? "/funcionario":"/administrador"}>
                         Dashboard
                         </Link>
-                        <Link className="nav-link link fs-4 text-black" to="/concecutivo">
+                        <Link className="nav-link link fs-4 text-black" to={this.props.opcion === "Crear Concecutivo"? "/concecutivo":"/usuarios"}>
                         {this.props.opcion}
                         </Link>
                     </nav>

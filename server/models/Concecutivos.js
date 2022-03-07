@@ -60,7 +60,7 @@ module.exports = class Concecutivos{
 
     async updateConcecutivo(id, concecutivo) {
         let conection = this.db.connect();
-        let query = `UPDATE CONCECUTIVOS SET NUMEROCONCECUTIVO = '${concecutivo.numeroConcecutivo}', DESCRIPCION = '${concecutivo.descripcion}' WHERE ID = ${id}`;
+        let query = `UPDATE CONCECUTIVOS SET NUMEROCONCECUTIVO = ${concecutivo.numeroConcecutivo}, DESCRIPCION = '${concecutivo.descripcion}' WHERE ID = ${id}`;
         return new Promise((resolve, reject) => {
             conection.query(query, (err) => {
                 if (err) {

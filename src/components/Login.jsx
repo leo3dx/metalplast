@@ -20,8 +20,12 @@ const Login = (props) => {
             .then(data => {
                 data.map(user => {
                     if (user.email === email && user.role === 1) {
-                        return 
-                    }else{
+                        localStorage.setItem("user", user.firstName)
+                        localStorage.setItem("id", user.id)
+                        return history.push("/administrador")
+                    }else if(user.email === email && user.role === 2){
+                        localStorage.setItem("user", user.firstName)
+                        localStorage.setItem("id", user.id)
                         return history.push("/funcionario")
                     }
                 })
@@ -44,7 +48,6 @@ const Login = (props) => {
                             <input className="form-control" type="password" id="password" />
                             <input className="btn btn-danger mt-3" type="submit" value="Ingresar"/>
                         </form>
-                        <Link to="/registrarse">Registrarse</Link>
                     </div>
                 </div>
             </>
